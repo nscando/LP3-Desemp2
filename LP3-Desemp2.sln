@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LP3-Desemp2", "LP3-Desemp2\LP3-Desemp2.csproj", "{047DE6F3-67D5-435E-8080-78BA5BDAC114}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{047DE6F3-67D5-435E-8080-78BA5BDAC114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{047DE6F3-67D5-435E-8080-78BA5BDAC114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{047DE6F3-67D5-435E-8080-78BA5BDAC114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{047DE6F3-67D5-435E-8080-78BA5BDAC114}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8CEC9CE5-6E1D-49CE-BD43-9150B003128D}
+	EndGlobalSection
+EndGlobal
