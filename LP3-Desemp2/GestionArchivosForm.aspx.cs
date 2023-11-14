@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace LP3_Desemp2
     {
@@ -11,8 +7,16 @@ namespace LP3_Desemp2
         {
         protected void Page_Load ( object sender, EventArgs e )
             {
-            HttpCookie cookie = Request.Cookies["username"];
+            HttpCookie cookie = Request.Cookies["nombreUsuario"];
             LabelCookie.Text = cookie != null ? cookie.Value : "Cookie Vacia";
+            if ( this.Session["nombreUsuario"] != null )
+                {
+                LabelCookie.Text = Session["nombreUsuario"].ToString();
+                }
+            else
+                {
+                LabelCookie.Text = "cookie vacia";
+                }
             }
         }
     }

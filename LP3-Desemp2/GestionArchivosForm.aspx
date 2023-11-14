@@ -3,4 +3,5 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Label ID="LabelCookie" runat="server" Text="Label"></asp:Label>
+    <h1>Gestion de Archivos</h1>
 </asp:Content>

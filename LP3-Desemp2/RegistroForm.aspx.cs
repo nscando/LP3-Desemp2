@@ -16,11 +16,12 @@ namespace LP3_Desemp2
 
         protected void btnRegistrarse_Click ( object sender, EventArgs e )
             {
-            HttpCookie cookie1 = new HttpCookie("username", TbUsername.Text);
+            this.Session["nombreUsuario"] = TbUsername.Text;
             HttpCookie cookie2 = new HttpCookie("password", TbPassword.Text);
             cookie2.Expires = DateTime.Now.AddMinutes(2);
-            Response.Cookies.Add(cookie1);
+            
             Response.Cookies.Add(cookie2);
+            
             Response.Redirect(Request.RawUrl);
             }
         }

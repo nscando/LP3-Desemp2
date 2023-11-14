@@ -11,8 +11,17 @@ namespace LP3_Desemp2
         {
         protected void Page_Load ( object sender, EventArgs e )
             {
-            HttpCookie cookie = Request.Cookies["username"];
-            LabelUsuario.Text = cookie != null ?  cookie.Value : "";
+       
+            HttpCookie cookie = Request.Cookies["nombreUsuario"];
+            LabelUsuario.Text = cookie != null ? cookie.Value : "Cookie Vacia";
+            if ( this.Session["nombreUsuario"] != null )
+                {
+                LabelUsuario.Text = Session["nombreUsuario"].ToString();
+                }
+            else
+                {
+                LabelUsuario.Text = "cookie vacia";
+                }
             }
         }
     }

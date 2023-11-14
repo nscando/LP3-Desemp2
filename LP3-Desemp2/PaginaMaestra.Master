@@ -46,7 +46,7 @@
             </nav>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-            <div class="navbar navbar-dark bg-dark mt-5 py-5 mb-0">
+            <div class="navbar navbar-dark bg-dark mt-5 py-5 mb-0 fixed-bottom">
                 <div class="container">
                     <p class="navbar-text text-white fs-5 fw-semibold">
                         Nicolás Scandizzo © 2023 LP3 DESEMP. 2. Todos los derechos reservados.
