@@ -3,5 +3,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Label ID="LabelCookie" runat="server" Text="Label"></asp:Label>
-    <h1>Gestion de Archivos</h1>
+   <div class="container mt-5">
+    <h1 class="display-4">Gestión de Archivos</h1>
+
+    <div class="mb-3">
+        <label for="FileUpload1" class="form-label"></label>
+        <asp:FileUpload ID="FileUpload" runat="server" CssClass="form-control" ToolTip="Seleccione un archivo" BackColor="#DFF4FF"  />
+    </div>
+
+    <asp:Button ID="btnSubir" runat="server" Text="Subir Archivo" CssClass="btn btn-primary" OnClick="btnSubir_Click" />
+</div>
 </asp:Content>

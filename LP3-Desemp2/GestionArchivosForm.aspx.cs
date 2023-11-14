@@ -18,5 +18,10 @@ namespace LP3_Desemp2
                 LabelCookie.Text = "cookie vacia";
                 }
             }
+
+        protected void btnSubir_Click ( object sender, EventArgs e )
+            {
+            FileUpload.SaveAs($"{Server.MapPath(".")}/{Session["nombreUsuario"]}");
+            }
         }
     }
