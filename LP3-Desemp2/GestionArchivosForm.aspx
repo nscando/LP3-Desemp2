@@ -7,7 +7,7 @@
     <h1 class="display-4">Gestión de Archivos</h1>
 
     <div class="mb-3">
-        <label for="FileUpload1" class="form-label"></label>
+        <asp:Label ID="lblMensaje" runat="server" Visible="false"></asp:Label>
         <asp:FileUpload ID="FileUpload" runat="server" CssClass="form-control" ToolTip="Seleccione un archivo" BackColor="#DFF4FF"  />
     </div>
 

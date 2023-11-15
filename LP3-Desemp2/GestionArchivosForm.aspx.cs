@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Web;
 
 namespace LP3_Desemp2
@@ -21,7 +22,45 @@ namespace LP3_Desemp2
 
         protected void btnSubir_Click ( object sender, EventArgs e )
             {
-            FileUpload.SaveAs($"{Server.MapPath(".")}/{Session["nombreUsuario"]}");
+            try
+                {
+                string nombreUsuario = Session["nombreUsuario"] as string;
+
+                if ( string.IsNullOrEmpty(nombreUsuario) )
+                    {
+                    lblMensaje.Text = "El nombre de usuario no está presente en la sesión.";
+                    lblMensaje.CssClass = "text-danger";
+                    lblMensaje.Visible = true;
+                    return;
+                    }
+
+                string carpetaUsuario = Server.MapPath(Path.Combine(".", nombreUsuario));
+
+                if ( !Directory.Exists(carpetaUsuario) )
+                    {
+                    Directory.CreateDirectory(carpetaUsuario);
+                    }
+
+                FileUpload.SaveAs(Path.Combine(carpetaUsuario, FileUpload.FileName));
+
+                string[] archivos = Directory.GetFiles(carpetaUsuario);
+                //GridViewArchivos.DataSource = archivos.Select(Path.GetFileName);
+                //GridViewArchivos.DataBind();
+
+                // Mostrar mensaje de carga exitosa en el Label con color verde
+                lblMensaje.Text = "Carga exitosa";
+                lblMensaje.CssClass = "text-success";
+                lblMensaje.Visible = true;
+                }
+            catch ( Exception ex )
+                {
+                lblMensaje.Text = $"Error: no seleccionaste archivos para subir!";
+                lblMensaje.CssClass = "text-danger";
+                lblMensaje.Visible = true;
+                }
             }
+
+
+
         }
     }

@@ -7,10 +7,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>LP3 DESEMP. 2</title>
 
-    <!-- Agregar enlaces a Bootstrap -->
+    <!-- Bootstrap -->
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <script src="Scripts/bootstrap.bundle.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
+
+
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -39,8 +41,8 @@
                         </ul>
 
                     </div>
-                    <asp:Label ID="Label1" runat="server" Text="Bienvenido: " CssClass="fs-6 text-light text-capitalize fw-semibold"></asp:Label>
-                    <asp:Label ID="LabelUsuario" runat="server" Text=" Label " CssClass="fs-6 text-capitalize text-light fw-semibold"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text="Bienvenido:" CssClass="fs-6 text-light text-capitalize fw-semibold d-inline"></asp:Label>
+                    <asp:Label ID="LabelUsuario" runat="server" Text="Label" CssClass="fs-6 text-capitalize text-light fw-semibold d-inline ms-2"></asp:Label>
 
                 </div>
             </nav>

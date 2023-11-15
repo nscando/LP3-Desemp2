@@ -24,6 +24,15 @@ namespace LP3_Desemp2
         protected global::System.Web.UI.WebControls.Label LabelCookie;
 
         /// <summary>
+        /// Control lblMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMensaje;
+
+        /// <summary>
         /// Control FileUpload.
         /// </summary>
         /// <remarks>
