@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Web;
+using System.Web.UI.WebControls;
+
 
 namespace LP3_Desemp2
     {
@@ -75,7 +75,16 @@ namespace LP3_Desemp2
 
         protected void GridViewArchivos_RowCommand ( object sender, System.Web.UI.WebControls.GridViewCommandEventArgs e )
             {
+            if ( e.CommandName == "Descargar" )
+                {
+                GridViewRow registro = GridViewArchivos.Rows[Convert.ToInt32(e.CommandArgument)];
+                string filePath = registro.Cells[2].Text;
 
+                Response.ContentType = "application/octet-stream";
+                Response.AppendHeader("Content-Disposition", "attachment; filename=" + Path.GetFileName(filePath));
+                Response.TransmitFile(filePath);
+                Response.End();
+                }
             }
         }
     }
